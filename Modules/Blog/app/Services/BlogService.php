@@ -24,6 +24,14 @@ class BlogService
         $blog = new Blog();
         $blog->user_id = $user->id;
         $blog->article = $data['article'];
+        $blog->title = $data['title'] ?? null;
+
+        if (isset($data['image']) && $data['image']->isValid()) {
+        $file = $data['image'];
+        $filename = time() . '_' . $file->getClientOriginalName();
+        $file->move(public_path('uploads/blogs'), $filename);
+        $blog->image = 'uploads/blogs/' . $filename;
+    }
         $blog->save();
 
         return $blog;
