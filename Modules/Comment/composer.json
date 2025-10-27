@@ -1,0 +1,30 @@
+{
+    "name": "nwidart/comment",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+   "autoload": {
+    "psr-4": {
+        "Modules\\Blog\\": "Modules/Comment/",
+        "Modules\\Blog\\Database\\Factories\\": "Modules/Comment/Database/Factories/",
+        "Modules\\Blog\\Database\\Seeders\\": "Modules/Comment/Database/Seeders/"
+    }
+},
+"autoload-dev": {
+    "psr-4": {
+        "Modules\\Comment\\Tests\\": "Modules/Comment/Tests/"
+    }
+}
+}

@@ -1,0 +1,6 @@
+{
+    "Blog": true,
+    "Auth": true,
+    "Comment": true,
+    "Like": true
+}
